@@ -16,7 +16,7 @@ nltk.download('punkt')
 GROQ_API_KEY = st.secrets['GROQ_API_KEY']
 # Initialize Groq Client
 client = Groq(
-    api_key=os.getenv('GROQ_API_KEY')
+    api_key= GROQ_API_KEY
 )
 
 # Function to extract text from PDF
