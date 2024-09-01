@@ -10,7 +10,6 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.units import inch
 import streamlit as st
 from groq import Groq
-from google.colab import userdata
 load_dotenv()
 
 # Download NLTK resources
