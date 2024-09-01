@@ -1,0 +1,7 @@
+pymupdf
+nltk
+reportlab
+requests
+groq
+streamlit
+python-dotenv
