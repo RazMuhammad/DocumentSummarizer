@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import requests
 import os
 import fitz  # PyMuPDF
@@ -10,14 +9,14 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.units import inch
 import streamlit as st
 from groq import Groq
-load_dotenv()
+
 
 # Download NLTK resources
 nltk.download('punkt')
-api_key = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets['GROQ_API_KEY']
 # Initialize Groq Client
 client = Groq(
-    api_key=api_key  # Ensure the API key is stored securely
+    api_key=os.getenv('GROQ_API_KEY')
 )
 
 # Function to extract text from PDF
@@ -159,5 +158,3 @@ if uploaded_file is not None:
             file_name="summary_output.pdf",
             mime="application/pdf"
         )
-
-
